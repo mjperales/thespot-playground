@@ -1,9 +1,9 @@
 export function isValid(s: string): boolean {
-  const match = { ")": "(", "}": "{", "]": "[" };
+  const match: { [key: string]: string } = { ")": "(", "}": "{", "]": "[" };
   // stack to keep track of opened brackets
   let stack = [];
   for (let i = 0; i <= s.length - 1; i++) {
-    const char = s[i];
+    const char: string = s[i]!;
     // if it's an opening bracket, push to stack
     if (s[i] === "(" || s[i] === "{" || s[i] === "[") {
       stack.push(s[i]);

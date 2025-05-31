@@ -1,5 +1,8 @@
 // classic two pointer strategy
-export function twoSum(numbers: number[], target: number): number[] {
+export function twoSum(
+  numbers: number[],
+  target: number
+): number[] | undefined {
   // numbers is already sorted
   let left = 0;
   let right = numbers.length - 1;
@@ -8,7 +11,7 @@ export function twoSum(numbers: number[], target: number): number[] {
     //🧠 So in short:
     // Too small? ➡️ Move left pointer right
     // Too big? ⬅️ Move right pointer left
-    const sum = numbers[right] + numbers[left];
+    const sum = numbers[right]! + numbers[left]!;
     // if sum is less than target move left
     if (sum < target) {
       left++;
