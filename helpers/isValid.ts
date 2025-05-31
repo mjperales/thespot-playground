@@ -1,6 +1,6 @@
 export function isValid(s: string): boolean {
   const match = { ")": "(", "}": "{", "]": "[" };
-  // stack to keep track of openned brackets
+  // stack to keep track of opened brackets
   let stack = [];
   for (let i = 0; i <= s.length - 1; i++) {
     const char = s[i];
