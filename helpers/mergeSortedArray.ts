@@ -18,7 +18,7 @@ export function merge(
 
   for (let x = p; x >= 0; x--) {
     if (p2 >= 0 && p1 >= 0) {
-      if (nums1[p1] > nums2[p2]) {
+      if (nums1[p1]! > nums2[p2]!) {
         nums1[x] = nums1[p1];
         p1--;
       } else {
